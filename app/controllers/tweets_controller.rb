@@ -2,13 +2,8 @@ class TweetsController < ApplicationController
   def index
   end
 
-  def show
-  end
-
-  def edit
-  end
-
   def new
+    @tweet = Tweet.new
   end
 
   def create
@@ -16,14 +11,22 @@ class TweetsController < ApplicationController
 
     respond_to do |format|
       if @tweet.save
-        format.html { redirect_to tweet_path(@tweet.id), notice: 'Success!'}
+        format.html { redirect_to tweet_path(@tweet.id), notice: 'success!'}
       else
-        format.html {render :new, error: 'There was a problem, please try again.'}
+        format.html { render :new, error: 'there was a problem' }
+      end
     end
   end
-end
-private
-  def tweet_params
-    params.require(:tweet).permit(:message,:user_id)
+
+  def edit
+  end
+
+  def show
+  end
+
+ private
+
+ def tweet_params
+    params.require(:tweet).permit(:message, :user_id)
   end
 end
