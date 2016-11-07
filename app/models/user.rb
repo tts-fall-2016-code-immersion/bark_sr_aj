@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-has_many :tweets
+  validates :username, presence:true
+  validates :username, uniqueness: true
+
+  has_many :tweets
 
 end
