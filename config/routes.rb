@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
   get 'profiles/show'
 
   get 'profiles/index'
 
+=======
+>>>>>>> b53ba49c1a5278bd053aa60d0878d0f1705f0282
   get "profiles" => "profiles#index"
   get 'profiles/:id' => 'profiles#show', as: :profile
 

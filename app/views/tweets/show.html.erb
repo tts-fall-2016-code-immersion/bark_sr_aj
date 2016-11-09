@@ -1,3 +1,4 @@
+
 <p>
   <strong>Message:</strong>
   <%= @tweet.message %>
@@ -8,6 +9,7 @@
   <%= @tweet.user.username %>
 </p>
 
+<%= render 'shared/likes' %><br>
 <%= link_to 'Edit', edit_tweet_path(@tweet.id) %> |
 <%= link_to 'Back', tweets_path %>
 <%= link_to "Sign Out", destroy_user_session_path,
