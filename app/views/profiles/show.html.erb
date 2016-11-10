@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 <h1><%= @user.username %>'s Profile</h1>
 
 <% @user.tweets.each do |tweet| %>
   <%= tweet.message %> <br />
-=======
+
 <div class="row">
   <div class= "col-xs-4">
   <h3><%= @user.name %></h3>
@@ -47,5 +46,4 @@
   <% else %>
     <%= link_to "Follow", relationships_path(friend_id: @user.id), method: :post, class: 'btn btn-success' %>
   <% end %>
->>>>>>> b53ba49c1a5278bd053aa60d0878d0f1705f0282
 <% end %>

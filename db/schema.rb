@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20161108045139) do
-=======
+
 ActiveRecord::Schema.define(version: 20161108013128) do
 
   create_table "likes", force: :cascade do |t|
@@ -21,7 +19,6 @@ ActiveRecord::Schema.define(version: 20161108013128) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
->>>>>>> b53ba49c1a5278bd053aa60d0878d0f1705f0282
 
   create_table "relationships", force: :cascade do |t|
     t.integer  "user_id"

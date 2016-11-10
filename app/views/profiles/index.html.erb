@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 <h1>All Users<h1/>
-<% @users.each do |user| %>
-  <%= link_to user.username, profile_path(user) %> <br />
-=======
+
 <h1>Select a User</h1>
 
 <% @users.each do |user|  %>
   <p><%= link_to user.username, profile_path(user.id) %></p>
->>>>>>> b53ba49c1a5278bd053aa60d0878d0f1705f0282
 <% end %>
